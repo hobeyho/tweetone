@@ -1,0 +1,18 @@
+%h1 ALL Tweets
+
+%table#tweets
+	%thead
+		%tr
+			%th User Id
+			%th Tweet Body
+			%th Created At
+			%th More Info
+	%tbody
+		-	@tweets.each do |tweet|
+			%tr
+				%td= tweet.userid
+				%td= tweet.text
+				%td= tweet.created_at.strftime("%B %d, %Y")
+				%td= link_to "see tweet", tweet_path(tweet)
+
+= link_to 'Add a new tweet', new_tweet_path

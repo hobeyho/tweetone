@@ -1,0 +1,11 @@
+%h2 Edit Tweet
+
+= form_tag tweet_path(@tweet), :method => :put do
+
+	= label :tweet, :userid, 'User Id'
+	= text_field :tweet, :userid
+
+	= label :tweet, :text, 'Tweet Body'
+	= text_field :tweet, :text
+
+	= submit_tag 'Save Changes'

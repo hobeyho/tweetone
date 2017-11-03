@@ -59,14 +59,14 @@ Rails.application.routes.draw do
   # Create routes for tweets_controller
   # the follwing routes can all be made at one shot by:
   #   resources :tweets
-  get 'tweets' => 'tweets_controller#index', as: :tweets
-  post 'tweets' => 'tweets_controller#create'
+  get 'tweets' => 'tweets#index', as: :tweets
+  post 'tweets' => 'tweets#create'
 
-  get 'tweets/new' => 'tweets_controller#new', as: :new_tweet
-  get 'tweets/:id/edit' => 'tweets_controller#edit', as: :edit_tweet
+  get 'tweets/new' => 'tweets#new', as: :new_tweet
+  get 'tweets/:id/edit' => 'tweets#edit', as: :edit_tweet
 
-  get 'tweets/:id' => 'tweets_controller#show', as: :tweet
-  patch 'tweets/:id' => 'tweets_controller#update'
-  put 'tweets/:id' => 'tweets_controller#update'
-  delete 'tweets/:id' => 'tweets_controller#destroy'
+  get 'tweets/:id' => 'tweets#show', as: :tweet
+  patch 'tweets/:id' => 'tweets#update'
+  put 'tweets/:id' => 'tweets#update'
+  delete 'tweets/:id' => 'tweets#destroy'
 end
